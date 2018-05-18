@@ -1,0 +1,70 @@
+.he-td {
+	font-size: 12px;
+}
+
+.icon {
+	background: url(/mgt/resources/images/tabicons.png) no-repeat;
+	width: 18px;
+	line-height: 18px;
+	display: inline-block;
+}
+
+.icon-sys {
+	background-position: 0px -200px;
+}
+
+/* .icon-menu {
+	background: url(/mgt/resources/images/application.png) no-repeat center
+		center;
+} */
+
+/*注意 background引入的先后顺序，后面会把前面覆盖掉*/
+.icon-nav {
+	background-position: -100px -20px;
+}
+
+/*菜单管理*/
+.icon-chart-organisation {
+    background: url('/mgt/resources/images/chart_organisation.png') no-repeat center center;
+}
+
+/*用户管理*/
+.icon-users {
+    background: url('/mgt/resources/images/users.png') no-repeat center center;
+}
+
+/*商品管理*/
+.icon-creditcards {
+    background: url('/mgt/resources/images/creditcards.png') no-repeat center center;
+}
+
+/*订单管理*/
+.icon-cart {
+    background: url('/mgt/resources/images/cart.png') no-repeat center center;
+}
+
+/*报表管理*/
+.icon-chart-curve {
+    background: url('/mgt/resources/images/chart_curve.png') no-repeat center center;
+}
+
+/*系统设置*/
+.icon-wrench {
+    background: url('/mgt/resources/images/wrench.png') no-repeat center center;
+}
+
+/*库存设置*/
+.icon-book {
+    background: url('/mgt/resources/images/book.png') no-repeat center center;
+}
+
+/*报表一级目录*/
+.icon-chart-bar {
+	background:url('/mgt/resources/images/chart_bar.png') no-repeat center center;
+}
+/*
+.easyui-accordion ul li div {
+    margin: 2px 0px;
+    padding-left: 10px;
+    padding-top: 2px;
+}*/

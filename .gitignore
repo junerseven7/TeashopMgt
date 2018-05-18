@@ -1,0 +1,12 @@
+# Maven build files
+target
+*.log
+
+# IntelliJ IDEA files
+.idea
+*.iml
+
+# eclips files
+.classpath
+.project
+.settings
