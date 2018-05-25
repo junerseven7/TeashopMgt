@@ -1,6 +1,3 @@
-/*
-*
-*/  
 package com.shop.mgt.controller;
 
 import java.util.HashMap;
@@ -18,41 +15,43 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.shop.mgt.service.ReportsService;
 
-/**  
-* @className:ReportsController.java
-* @description:报表
-* @author hj  
-* @date 2018年4月19日  
-*/
+/**
+ * @author hj
+ * @className:ReportsController.java
+ * @description:报表
+ * @date 2018年4月19日
+ */
 @Controller
 @RequestMapping("/reports")
 public class ReportsController extends BaseController {
-	private final static Logger logger = LoggerFactory.getLogger(ReportsController.class);
+    private final static Logger logger = LoggerFactory.getLogger(ReportsController.class);
 
-	@Autowired
-	private ReportsService reportsService;
-	
-	@RequestMapping("/goodsUse")
-	public String welcome() {
-		return "reports/goodsUseReport";
-	}
-	
-	/**  
-	 * Title: listGoodsUse
-	 * Description: 商品使用报表数据
-	 * @param request
-	 * @return  
-	 * @throws Exception 
-	 */  
-	@RequestMapping("/inventorData")
-	@ResponseBody
-	public Map<String, List<Object>> listGoodsUse(HttpServletRequest request) throws Exception {
-		if(null == request.getParameter("good_id"))
-			return new HashMap<String, List<Object>>();
-		
-		int goodId =Integer.valueOf(request.getParameter("good_id"));
-		logger.debug("[ReportsController.listGoodsUse] goodId = {}",goodId);
-		return reportsService.listGoodsUse(goodId);
-	}
-	
+    @Autowired
+    private ReportsService reportsService;
+
+    @RequestMapping("/goodsUse")
+    public String welcome() {
+        return "reports/goodsUseReport";
+    }
+
+    /**
+     * Title: listGoodsUse
+     * Description: 商品使用报表数据
+     *
+     * @param request
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/inventorData")
+    @ResponseBody
+    public Map<String, List<Object>> listGoodsUse(HttpServletRequest request) throws Exception {
+        if (null == request.getParameter("good_id"))
+            return new HashMap<String, List<Object>>();
+
+        int goodId = Integer.valueOf(request.getParameter("good_id"));
+        logger.debug("[ReportsController.listGoodsUse] goodId = {}", goodId);
+
+        return reportsService.listGoodsUse(goodId);
+    }
+
 }
